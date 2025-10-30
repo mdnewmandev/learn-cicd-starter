@@ -8,10 +8,10 @@ import (
 
 func TestGetAPIKey(t *testing.T) {
 	tests := []struct {
-		name	string
-		h		http.Header
-		key  	string
-		err  	error
+		name string
+		h    http.Header
+		key  string
+		err  error
 	}{
 		{
 			name: "valid api key",
@@ -33,7 +33,7 @@ func TestGetAPIKey(t *testing.T) {
 				"Authorization": []string{"Bearer some_token"},
 			},
 			key: "",
-			err:  errors.New("malformed authorization header"),
+			err: errors.New("malformed authorization header"),
 		},
 	}
 
